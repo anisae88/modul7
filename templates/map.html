@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fe4f4e6f6b7d94fb38383b9380818ded {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fe4f4e6f6b7d94fb38383b9380818ded" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fe4f4e6f6b7d94fb38383b9380818ded = L.map(
+                "map_fe4f4e6f6b7d94fb38383b9380818ded",
+                {
+                    center: [-7.43, 109.24],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fec76211a9afbd402c48cd884b60a8ae = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fec76211a9afbd402c48cd884b60a8ae.addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var marker_3b12e4c65c6ffa1d6a21155062a30c71 = L.marker(
+                [-7.43, 109.24],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_820b63db44d0e806b40baccb37195f86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_794cfe1d82a970f8bf577a16dc88d6f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_be8d6eb68f8042677af490ec1097817b = $(`<div id="html_be8d6eb68f8042677af490ec1097817b" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Purwokerto</h5>              <hr>              <b>PM2.5 :</b> 71<br>             <b>CO :</b> 5.95<br>             <b>Suhu :</b> 31 °C<br>             <b>Kelembapan :</b> 91 %<br>              <hr>              <b>Kategori :</b> Udara Baik         </div>         </div>`)[0];
+                popup_794cfe1d82a970f8bf577a16dc88d6f1.setContent(html_be8d6eb68f8042677af490ec1097817b);
+            
+        
+
+        marker_3b12e4c65c6ffa1d6a21155062a30c71.bindPopup(popup_794cfe1d82a970f8bf577a16dc88d6f1)
+        ;
+
+        
+    
+    
+            marker_3b12e4c65c6ffa1d6a21155062a30c71.bindTooltip(
+                `<div>
+                     Purwokerto
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b12e4c65c6ffa1d6a21155062a30c71.setIcon(icon_820b63db44d0e806b40baccb37195f86);
+            
+    
+            var marker_c824d421ed396a5834b625a0cf2a784a = L.marker(
+                [-7.72, 109.01],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_60f259043cb93b825c20c362e3893f8f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_545c7c0873447f3b1e14e848e6d9a9f9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_201de7830513a872dd0dc1df86b12971 = $(`<div id="html_201de7830513a872dd0dc1df86b12971" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Cilacap</h5>              <hr>              <b>PM2.5 :</b> 109<br>             <b>CO :</b> 6.15<br>             <b>Suhu :</b> 29 °C<br>             <b>Kelembapan :</b> 93 %<br>              <hr>              <b>Kategori :</b> Udara Baik         </div>         </div>`)[0];
+                popup_545c7c0873447f3b1e14e848e6d9a9f9.setContent(html_201de7830513a872dd0dc1df86b12971);
+            
+        
+
+        marker_c824d421ed396a5834b625a0cf2a784a.bindPopup(popup_545c7c0873447f3b1e14e848e6d9a9f9)
+        ;
+
+        
+    
+    
+            marker_c824d421ed396a5834b625a0cf2a784a.bindTooltip(
+                `<div>
+                     Cilacap
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c824d421ed396a5834b625a0cf2a784a.setIcon(icon_60f259043cb93b825c20c362e3893f8f);
+            
+    
+            var marker_49dfe0a2d1250199c7a2da91a85fc4e2 = L.marker(
+                [-7.51, 109.29],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_ee76fe7ca6659cfc06be49e1365598b6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf8d3f227d13f57c787110141438421a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38e7a5d3fc4c2cf407270e6d81aef700 = $(`<div id="html_38e7a5d3fc4c2cf407270e6d81aef700" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Banyumas</h5>              <hr>              <b>PM2.5 :</b> 40<br>             <b>CO :</b> 7.58<br>             <b>Suhu :</b> 31 °C<br>             <b>Kelembapan :</b> 91 %<br>              <hr>              <b>Kategori :</b> Udara Baik         </div>         </div>`)[0];
+                popup_cf8d3f227d13f57c787110141438421a.setContent(html_38e7a5d3fc4c2cf407270e6d81aef700);
+            
+        
+
+        marker_49dfe0a2d1250199c7a2da91a85fc4e2.bindPopup(popup_cf8d3f227d13f57c787110141438421a)
+        ;
+
+        
+    
+    
+            marker_49dfe0a2d1250199c7a2da91a85fc4e2.bindTooltip(
+                `<div>
+                     Banyumas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49dfe0a2d1250199c7a2da91a85fc4e2.setIcon(icon_ee76fe7ca6659cfc06be49e1365598b6);
+            
+    
+            var marker_971df8d179949006dd345fe732ef5b47 = L.marker(
+                [-7.39, 109.36],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_90e9d4a7bc6b6d2615c51abff1ba47f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acea4a1b7e239f7dc91a59f13b6a5e59 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_44505b3f81d3790cf50bf53ed7291b0e = $(`<div id="html_44505b3f81d3790cf50bf53ed7291b0e" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Purbalingga</h5>              <hr>              <b>PM2.5 :</b> 142<br>             <b>CO :</b> 1.32<br>             <b>Suhu :</b> 24 °C<br>             <b>Kelembapan :</b> 70 %<br>              <hr>              <b>Kategori :</b> Udara Buruk         </div>         </div>`)[0];
+                popup_acea4a1b7e239f7dc91a59f13b6a5e59.setContent(html_44505b3f81d3790cf50bf53ed7291b0e);
+            
+        
+
+        marker_971df8d179949006dd345fe732ef5b47.bindPopup(popup_acea4a1b7e239f7dc91a59f13b6a5e59)
+        ;
+
+        
+    
+    
+            marker_971df8d179949006dd345fe732ef5b47.bindTooltip(
+                `<div>
+                     Purbalingga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_971df8d179949006dd345fe732ef5b47.setIcon(icon_90e9d4a7bc6b6d2615c51abff1ba47f6);
+            
+    
+            var marker_89d239ff94e71503eb8276eba9642005 = L.marker(
+                [-7.37, 109.68],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_453fd1299cba201720404d73abacb176 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dff987542572790d5cb07bf64d3d6361 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f77dffcf6c03a9291bc87cd3c0021042 = $(`<div id="html_f77dffcf6c03a9291bc87cd3c0021042" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Banjarnegara</h5>              <hr>              <b>PM2.5 :</b> 40<br>             <b>CO :</b> 4.36<br>             <b>Suhu :</b> 36 °C<br>             <b>Kelembapan :</b> 63 %<br>              <hr>              <b>Kategori :</b> Udara Buruk         </div>         </div>`)[0];
+                popup_dff987542572790d5cb07bf64d3d6361.setContent(html_f77dffcf6c03a9291bc87cd3c0021042);
+            
+        
+
+        marker_89d239ff94e71503eb8276eba9642005.bindPopup(popup_dff987542572790d5cb07bf64d3d6361)
+        ;
+
+        
+    
+    
+            marker_89d239ff94e71503eb8276eba9642005.bindTooltip(
+                `<div>
+                     Banjarnegara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_89d239ff94e71503eb8276eba9642005.setIcon(icon_453fd1299cba201720404d73abacb176);
+            
+    
+            var marker_ff03cddfcddf483912ad59edc2e88d87 = L.marker(
+                [-7.67, 109.65],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_7c1ba2d8d532e18a6d5ff56da15a70a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f6eef2c4e5d71bb935b2d8f0c3444de = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bdc09e3e4abcb5f0ac4681bd404dc43e = $(`<div id="html_bdc09e3e4abcb5f0ac4681bd404dc43e" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Kebumen</h5>              <hr>              <b>PM2.5 :</b> 137<br>             <b>CO :</b> 7.38<br>             <b>Suhu :</b> 28 °C<br>             <b>Kelembapan :</b> 63 %<br>              <hr>              <b>Kategori :</b> Udara Buruk         </div>         </div>`)[0];
+                popup_7f6eef2c4e5d71bb935b2d8f0c3444de.setContent(html_bdc09e3e4abcb5f0ac4681bd404dc43e);
+            
+        
+
+        marker_ff03cddfcddf483912ad59edc2e88d87.bindPopup(popup_7f6eef2c4e5d71bb935b2d8f0c3444de)
+        ;
+
+        
+    
+    
+            marker_ff03cddfcddf483912ad59edc2e88d87.bindTooltip(
+                `<div>
+                     Kebumen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ff03cddfcddf483912ad59edc2e88d87.setIcon(icon_7c1ba2d8d532e18a6d5ff56da15a70a6);
+            
+    
+            var marker_d46de7bcb7f30a7995fb2c0b205f0ba5 = L.marker(
+                [-6.87, 109.14],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_29b04b79b1dca77a4b0b185b14ce1cec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb67336e344b0a132be8032f1e43ce7c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e3c1a1a4205ed9a3ffc123ac25fb25b2 = $(`<div id="html_e3c1a1a4205ed9a3ffc123ac25fb25b2" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Tegal</h5>              <hr>              <b>PM2.5 :</b> 101<br>             <b>CO :</b> 4.44<br>             <b>Suhu :</b> 28 °C<br>             <b>Kelembapan :</b> 89 %<br>              <hr>              <b>Kategori :</b> Udara Baik         </div>         </div>`)[0];
+                popup_eb67336e344b0a132be8032f1e43ce7c.setContent(html_e3c1a1a4205ed9a3ffc123ac25fb25b2);
+            
+        
+
+        marker_d46de7bcb7f30a7995fb2c0b205f0ba5.bindPopup(popup_eb67336e344b0a132be8032f1e43ce7c)
+        ;
+
+        
+    
+    
+            marker_d46de7bcb7f30a7995fb2c0b205f0ba5.bindTooltip(
+                `<div>
+                     Tegal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d46de7bcb7f30a7995fb2c0b205f0ba5.setIcon(icon_29b04b79b1dca77a4b0b185b14ce1cec);
+            
+    
+            var marker_f2141516b079d7ee61a8ec4659c93eec = L.marker(
+                [-6.89, 109.38],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_00e716b33c2f19f7c65f7c8e888308b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7f6b2b03e8d7713b996f1be6ed18ee7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_931f42f583b8595d1b3e7150305596d0 = $(`<div id="html_931f42f583b8595d1b3e7150305596d0" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Pemalang</h5>              <hr>              <b>PM2.5 :</b> 51<br>             <b>CO :</b> 1.04<br>             <b>Suhu :</b> 27 °C<br>             <b>Kelembapan :</b> 80 %<br>              <hr>              <b>Kategori :</b> Udara Sedang         </div>         </div>`)[0];
+                popup_f7f6b2b03e8d7713b996f1be6ed18ee7.setContent(html_931f42f583b8595d1b3e7150305596d0);
+            
+        
+
+        marker_f2141516b079d7ee61a8ec4659c93eec.bindPopup(popup_f7f6b2b03e8d7713b996f1be6ed18ee7)
+        ;
+
+        
+    
+    
+            marker_f2141516b079d7ee61a8ec4659c93eec.bindTooltip(
+                `<div>
+                     Pemalang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f2141516b079d7ee61a8ec4659c93eec.setIcon(icon_00e716b33c2f19f7c65f7c8e888308b0);
+            
+    
+            var marker_01178fd83f67dff64da8c4459e6e8b29 = L.marker(
+                [-6.87, 109.04],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_15f45e03af6a502943b2fa00eb6074d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_73ba0488519a5d6598a1203e28f634d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4268f9b3abdd1b82165002d668ea9baa = $(`<div id="html_4268f9b3abdd1b82165002d668ea9baa" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Brebes</h5>              <hr>              <b>PM2.5 :</b> 20<br>             <b>CO :</b> 7.9<br>             <b>Suhu :</b> 33 °C<br>             <b>Kelembapan :</b> 90 %<br>              <hr>              <b>Kategori :</b> Udara Baik         </div>         </div>`)[0];
+                popup_73ba0488519a5d6598a1203e28f634d4.setContent(html_4268f9b3abdd1b82165002d668ea9baa);
+            
+        
+
+        marker_01178fd83f67dff64da8c4459e6e8b29.bindPopup(popup_73ba0488519a5d6598a1203e28f634d4)
+        ;
+
+        
+    
+    
+            marker_01178fd83f67dff64da8c4459e6e8b29.bindTooltip(
+                `<div>
+                     Brebes
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01178fd83f67dff64da8c4459e6e8b29.setIcon(icon_15f45e03af6a502943b2fa00eb6074d6);
+            
+    
+            var marker_cb330a2a66ca82a11394894d9c6bcb04 = L.marker(
+                [-6.98, 109.13],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_32d0a41e10dfd6a62809fcb4ca67c272 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7dbc4701c4015065a0bb87d879584fde = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4737c6ac790336faecf317cfc896ff79 = $(`<div id="html_4737c6ac790336faecf317cfc896ff79" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Slawi</h5>              <hr>              <b>PM2.5 :</b> 106<br>             <b>CO :</b> 2.82<br>             <b>Suhu :</b> 36 °C<br>             <b>Kelembapan :</b> 64 %<br>              <hr>              <b>Kategori :</b> Udara Buruk         </div>         </div>`)[0];
+                popup_7dbc4701c4015065a0bb87d879584fde.setContent(html_4737c6ac790336faecf317cfc896ff79);
+            
+        
+
+        marker_cb330a2a66ca82a11394894d9c6bcb04.bindPopup(popup_7dbc4701c4015065a0bb87d879584fde)
+        ;
+
+        
+    
+    
+            marker_cb330a2a66ca82a11394894d9c6bcb04.bindTooltip(
+                `<div>
+                     Slawi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb330a2a66ca82a11394894d9c6bcb04.setIcon(icon_32d0a41e10dfd6a62809fcb4ca67c272);
+            
+    
+            var marker_9759d1f60288a9cffb84ba89482c697e = L.marker(
+                [-7.36, 109.9],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_548bbf6caae26f61faaf4ea7f7615fd8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fe0978953858043dee00de74c5d1174 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ae31270602e97428a01504396ed77d2a = $(`<div id="html_ae31270602e97428a01504396ed77d2a" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Wonosobo</h5>              <hr>              <b>PM2.5 :</b> 106<br>             <b>CO :</b> 5.55<br>             <b>Suhu :</b> 25 °C<br>             <b>Kelembapan :</b> 65 %<br>              <hr>              <b>Kategori :</b> Udara Buruk         </div>         </div>`)[0];
+                popup_2fe0978953858043dee00de74c5d1174.setContent(html_ae31270602e97428a01504396ed77d2a);
+            
+        
+
+        marker_9759d1f60288a9cffb84ba89482c697e.bindPopup(popup_2fe0978953858043dee00de74c5d1174)
+        ;
+
+        
+    
+    
+            marker_9759d1f60288a9cffb84ba89482c697e.bindTooltip(
+                `<div>
+                     Wonosobo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9759d1f60288a9cffb84ba89482c697e.setIcon(icon_548bbf6caae26f61faaf4ea7f7615fd8);
+            
+    
+            var marker_d21ad37034ad4f04277284f43d71480f = L.marker(
+                [-7.47, 110.22],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_a1eea2bdb29201de76a6aecbbbec18bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31bd99efcc0f1fe4acc51cc90cee5038 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_24447cdd63834adcba830905fa07db3e = $(`<div id="html_24447cdd63834adcba830905fa07db3e" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Magelang</h5>              <hr>              <b>PM2.5 :</b> 107<br>             <b>CO :</b> 3.06<br>             <b>Suhu :</b> 34 °C<br>             <b>Kelembapan :</b> 64 %<br>              <hr>              <b>Kategori :</b> Udara Buruk         </div>         </div>`)[0];
+                popup_31bd99efcc0f1fe4acc51cc90cee5038.setContent(html_24447cdd63834adcba830905fa07db3e);
+            
+        
+
+        marker_d21ad37034ad4f04277284f43d71480f.bindPopup(popup_31bd99efcc0f1fe4acc51cc90cee5038)
+        ;
+
+        
+    
+    
+            marker_d21ad37034ad4f04277284f43d71480f.bindTooltip(
+                `<div>
+                     Magelang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d21ad37034ad4f04277284f43d71480f.setIcon(icon_a1eea2bdb29201de76a6aecbbbec18bb);
+            
+    
+            var marker_8544c48c551ff443d9fccb2619c05254 = L.marker(
+                [-6.99, 110.42],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_4861e847e7c2f07c0b1b796f0811f64d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ec4b4eb332d8f1762bee314d8bef69a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bfea36446454c9ba0b8cb0e41ee595e3 = $(`<div id="html_bfea36446454c9ba0b8cb0e41ee595e3" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Semarang</h5>              <hr>              <b>PM2.5 :</b> 67<br>             <b>CO :</b> 1.6<br>             <b>Suhu :</b> 36 °C<br>             <b>Kelembapan :</b> 86 %<br>              <hr>              <b>Kategori :</b> Udara Sedang         </div>         </div>`)[0];
+                popup_4ec4b4eb332d8f1762bee314d8bef69a.setContent(html_bfea36446454c9ba0b8cb0e41ee595e3);
+            
+        
+
+        marker_8544c48c551ff443d9fccb2619c05254.bindPopup(popup_4ec4b4eb332d8f1762bee314d8bef69a)
+        ;
+
+        
+    
+    
+            marker_8544c48c551ff443d9fccb2619c05254.bindTooltip(
+                `<div>
+                     Semarang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8544c48c551ff443d9fccb2619c05254.setIcon(icon_4861e847e7c2f07c0b1b796f0811f64d);
+            
+    
+            var marker_acf395efc9426230eaad097a917afbe1 = L.marker(
+                [-7.56, 110.82],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_48c7b90a2efc9542cd3fcaa52f5be446 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_058d08a6fd9767669ec1d30144e44a29 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_50c412acbce9bb469b951ee42f636b22 = $(`<div id="html_50c412acbce9bb469b951ee42f636b22" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Solo</h5>              <hr>              <b>PM2.5 :</b> 38<br>             <b>CO :</b> 3.91<br>             <b>Suhu :</b> 24 °C<br>             <b>Kelembapan :</b> 67 %<br>              <hr>              <b>Kategori :</b> Udara Buruk         </div>         </div>`)[0];
+                popup_058d08a6fd9767669ec1d30144e44a29.setContent(html_50c412acbce9bb469b951ee42f636b22);
+            
+        
+
+        marker_acf395efc9426230eaad097a917afbe1.bindPopup(popup_058d08a6fd9767669ec1d30144e44a29)
+        ;
+
+        
+    
+    
+            marker_acf395efc9426230eaad097a917afbe1.bindTooltip(
+                `<div>
+                     Solo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_acf395efc9426230eaad097a917afbe1.setIcon(icon_48c7b90a2efc9542cd3fcaa52f5be446);
+            
+    
+            var marker_52dc39796cbed8d041db1243e7957d45 = L.marker(
+                [-7.8, 110.36],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_07526a63d181ac391de811ce4b6413ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e44b0d28643288d4512f832f7896ae0a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e8d02d7adcb7f663427e139ce53b20f9 = $(`<div id="html_e8d02d7adcb7f663427e139ce53b20f9" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>Yogyakarta</h5>              <hr>              <b>PM2.5 :</b> 135<br>             <b>CO :</b> 1.35<br>             <b>Suhu :</b> 26 °C<br>             <b>Kelembapan :</b> 89 %<br>              <hr>              <b>Kategori :</b> Udara Sedang         </div>         </div>`)[0];
+                popup_e44b0d28643288d4512f832f7896ae0a.setContent(html_e8d02d7adcb7f663427e139ce53b20f9);
+            
+        
+
+        marker_52dc39796cbed8d041db1243e7957d45.bindPopup(popup_e44b0d28643288d4512f832f7896ae0a)
+        ;
+
+        
+    
+    
+            marker_52dc39796cbed8d041db1243e7957d45.bindTooltip(
+                `<div>
+                     Yogyakarta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_52dc39796cbed8d041db1243e7957d45.setIcon(icon_07526a63d181ac391de811ce4b6413ef);
+            
+    
+            var marker_9a16646842fe6c5c25343f7fc6dee269 = L.marker(
+                [-6.8954449, 110.6367297],
+                {
+}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+            var icon_c63284a4a4c79dbd7ea844e8e33d7dfa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71f417d44d1848e03ef8f7826f62bdf0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4a8fdabf842d7c5c6fe833c5f089bd41 = $(`<div id="html_4a8fdabf842d7c5c6fe833c5f089bd41" style="width: 100.0%; height: 100.0%;">         <div style="width:200px;">             <h5>RumahkuDemak</h5>              <hr>              <b>PM2.5 :</b> 55<br>             <b>CO :</b> 1.4<br>             <b>Suhu :</b> 56 °C<br>             <b>Kelembapan :</b> 90 %<br>              <hr>              <b>Kategori :</b> Udara Sedang         </div>         </div>`)[0];
+                popup_71f417d44d1848e03ef8f7826f62bdf0.setContent(html_4a8fdabf842d7c5c6fe833c5f089bd41);
+            
+        
+
+        marker_9a16646842fe6c5c25343f7fc6dee269.bindPopup(popup_71f417d44d1848e03ef8f7826f62bdf0)
+        ;
+
+        
+    
+    
+            marker_9a16646842fe6c5c25343f7fc6dee269.bindTooltip(
+                `<div>
+                     RumahkuDemak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9a16646842fe6c5c25343f7fc6dee269.setIcon(icon_c63284a4a4c79dbd7ea844e8e33d7dfa);
+            
+    
+            var circle_marker_ae07e9b9475f478e91bca1269be1d122 = L.circleMarker(
+                [-7.43, 109.24],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.1, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_b8624006eea417e0ea7173a137dd59cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_744316304b97bbc4eb16985aa89a0140 = $(`<div id="html_744316304b97bbc4eb16985aa89a0140" style="width: 100.0%; height: 100.0%;">             Lokasi: Purwokerto<br>             PM2.5: 71<br>             Status: Udara Baik             </div>`)[0];
+                popup_b8624006eea417e0ea7173a137dd59cb.setContent(html_744316304b97bbc4eb16985aa89a0140);
+            
+        
+
+        circle_marker_ae07e9b9475f478e91bca1269be1d122.bindPopup(popup_b8624006eea417e0ea7173a137dd59cb)
+        ;
+
+        
+    
+    
+            var circle_marker_f509c879683713f866dabeafeca6bf11 = L.circleMarker(
+                [-7.72, 109.01],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.9, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_1f8608e618a759bb7b534b0e79fb5bb8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_55d491998affba595c7705d725b31312 = $(`<div id="html_55d491998affba595c7705d725b31312" style="width: 100.0%; height: 100.0%;">             Lokasi: Cilacap<br>             PM2.5: 109<br>             Status: Udara Baik             </div>`)[0];
+                popup_1f8608e618a759bb7b534b0e79fb5bb8.setContent(html_55d491998affba595c7705d725b31312);
+            
+        
+
+        circle_marker_f509c879683713f866dabeafeca6bf11.bindPopup(popup_1f8608e618a759bb7b534b0e79fb5bb8)
+        ;
+
+        
+    
+    
+            var circle_marker_d5cf88f62fead5d49e6169be31a26d3a = L.circleMarker(
+                [-7.51, 109.29],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_6b8937ce8bf4a3a1e2a3290fada90170 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25e92816e5cf9154a9fbac23477b02d3 = $(`<div id="html_25e92816e5cf9154a9fbac23477b02d3" style="width: 100.0%; height: 100.0%;">             Lokasi: Banyumas<br>             PM2.5: 40<br>             Status: Udara Baik             </div>`)[0];
+                popup_6b8937ce8bf4a3a1e2a3290fada90170.setContent(html_25e92816e5cf9154a9fbac23477b02d3);
+            
+        
+
+        circle_marker_d5cf88f62fead5d49e6169be31a26d3a.bindPopup(popup_6b8937ce8bf4a3a1e2a3290fada90170)
+        ;
+
+        
+    
+    
+            var circle_marker_9f18925ce4ce59ec3f5853235810af52 = L.circleMarker(
+                [-7.39, 109.36],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.2, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_52c4759dd666938969df0de8d47d5348 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40104af6b3f0b1acd9acacba933efa23 = $(`<div id="html_40104af6b3f0b1acd9acacba933efa23" style="width: 100.0%; height: 100.0%;">             Lokasi: Purbalingga<br>             PM2.5: 142<br>             Status: Udara Buruk             </div>`)[0];
+                popup_52c4759dd666938969df0de8d47d5348.setContent(html_40104af6b3f0b1acd9acacba933efa23);
+            
+        
+
+        circle_marker_9f18925ce4ce59ec3f5853235810af52.bindPopup(popup_52c4759dd666938969df0de8d47d5348)
+        ;
+
+        
+    
+    
+            var circle_marker_3b81c9c434b437005e772e57fdec5760 = L.circleMarker(
+                [-7.37, 109.68],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.0, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_8d05b46d25274690cff8a976c3946e1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3036b942a3ac00ca1eda89b620303bb = $(`<div id="html_a3036b942a3ac00ca1eda89b620303bb" style="width: 100.0%; height: 100.0%;">             Lokasi: Banjarnegara<br>             PM2.5: 40<br>             Status: Udara Buruk             </div>`)[0];
+                popup_8d05b46d25274690cff8a976c3946e1c.setContent(html_a3036b942a3ac00ca1eda89b620303bb);
+            
+        
+
+        circle_marker_3b81c9c434b437005e772e57fdec5760.bindPopup(popup_8d05b46d25274690cff8a976c3946e1c)
+        ;
+
+        
+    
+    
+            var circle_marker_fcd5d11d941c9cf13acbe6f0b4ff3a8d = L.circleMarker(
+                [-7.67, 109.65],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.7, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_f7c3f0b8922e5c0c2e85c88d240a60a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87b21d24d65350a0199055adde581ffe = $(`<div id="html_87b21d24d65350a0199055adde581ffe" style="width: 100.0%; height: 100.0%;">             Lokasi: Kebumen<br>             PM2.5: 137<br>             Status: Udara Buruk             </div>`)[0];
+                popup_f7c3f0b8922e5c0c2e85c88d240a60a9.setContent(html_87b21d24d65350a0199055adde581ffe);
+            
+        
+
+        circle_marker_fcd5d11d941c9cf13acbe6f0b4ff3a8d.bindPopup(popup_f7c3f0b8922e5c0c2e85c88d240a60a9)
+        ;
+
+        
+    
+    
+            var circle_marker_f923173a1d393601a14a7271d34266d7 = L.circleMarker(
+                [-6.87, 109.14],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.1, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_6ae0e70b78dc861928e443128e01a654 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_545a23c4c129fc06b053fc6b2db88ced = $(`<div id="html_545a23c4c129fc06b053fc6b2db88ced" style="width: 100.0%; height: 100.0%;">             Lokasi: Tegal<br>             PM2.5: 101<br>             Status: Udara Baik             </div>`)[0];
+                popup_6ae0e70b78dc861928e443128e01a654.setContent(html_545a23c4c129fc06b053fc6b2db88ced);
+            
+        
+
+        circle_marker_f923173a1d393601a14a7271d34266d7.bindPopup(popup_6ae0e70b78dc861928e443128e01a654)
+        ;
+
+        
+    
+    
+            var circle_marker_dc52f224ecd1f83245d4b8853bdeda62 = L.circleMarker(
+                [-6.89, 109.38],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.1, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_bc77720d8293a1d7f56e89233018c5a9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d36dbc40ef528a5c0bd7200e54ed478 = $(`<div id="html_7d36dbc40ef528a5c0bd7200e54ed478" style="width: 100.0%; height: 100.0%;">             Lokasi: Pemalang<br>             PM2.5: 51<br>             Status: Udara Sedang             </div>`)[0];
+                popup_bc77720d8293a1d7f56e89233018c5a9.setContent(html_7d36dbc40ef528a5c0bd7200e54ed478);
+            
+        
+
+        circle_marker_dc52f224ecd1f83245d4b8853bdeda62.bindPopup(popup_bc77720d8293a1d7f56e89233018c5a9)
+        ;
+
+        
+    
+    
+            var circle_marker_2bd85b30d84090465e5227694edbcb6b = L.circleMarker(
+                [-6.87, 109.04],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_ca19f896f4b77087d5a3963da735f39d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ee93916ee39ccaad280863fb5882049 = $(`<div id="html_9ee93916ee39ccaad280863fb5882049" style="width: 100.0%; height: 100.0%;">             Lokasi: Brebes<br>             PM2.5: 20<br>             Status: Udara Baik             </div>`)[0];
+                popup_ca19f896f4b77087d5a3963da735f39d.setContent(html_9ee93916ee39ccaad280863fb5882049);
+            
+        
+
+        circle_marker_2bd85b30d84090465e5227694edbcb6b.bindPopup(popup_ca19f896f4b77087d5a3963da735f39d)
+        ;
+
+        
+    
+    
+            var circle_marker_bc67dda4613b8f6a98b523b825a0cc00 = L.circleMarker(
+                [-6.98, 109.13],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.6, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_4861886b66ff36a0c650c5fb6e63daf3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4442ddb938db431da8ba0d277210573e = $(`<div id="html_4442ddb938db431da8ba0d277210573e" style="width: 100.0%; height: 100.0%;">             Lokasi: Slawi<br>             PM2.5: 106<br>             Status: Udara Buruk             </div>`)[0];
+                popup_4861886b66ff36a0c650c5fb6e63daf3.setContent(html_4442ddb938db431da8ba0d277210573e);
+            
+        
+
+        circle_marker_bc67dda4613b8f6a98b523b825a0cc00.bindPopup(popup_4861886b66ff36a0c650c5fb6e63daf3)
+        ;
+
+        
+    
+    
+            var circle_marker_c2323f2b572bdc8b7535f47d0af34b9d = L.circleMarker(
+                [-7.36, 109.9],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.6, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_549bdb6cddebe3fdac16771d694bddaf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d676cd55b0db6cdeebfcb0c58571ac6 = $(`<div id="html_0d676cd55b0db6cdeebfcb0c58571ac6" style="width: 100.0%; height: 100.0%;">             Lokasi: Wonosobo<br>             PM2.5: 106<br>             Status: Udara Buruk             </div>`)[0];
+                popup_549bdb6cddebe3fdac16771d694bddaf.setContent(html_0d676cd55b0db6cdeebfcb0c58571ac6);
+            
+        
+
+        circle_marker_c2323f2b572bdc8b7535f47d0af34b9d.bindPopup(popup_549bdb6cddebe3fdac16771d694bddaf)
+        ;
+
+        
+    
+    
+            var circle_marker_98e5303a715c46fe7f36f3f3106c4d54 = L.circleMarker(
+                [-7.47, 110.22],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.7, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_d147c22b0926e589088ac290da930430 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67b4e82c505449734af6a271371cb0fc = $(`<div id="html_67b4e82c505449734af6a271371cb0fc" style="width: 100.0%; height: 100.0%;">             Lokasi: Magelang<br>             PM2.5: 107<br>             Status: Udara Buruk             </div>`)[0];
+                popup_d147c22b0926e589088ac290da930430.setContent(html_67b4e82c505449734af6a271371cb0fc);
+            
+        
+
+        circle_marker_98e5303a715c46fe7f36f3f3106c4d54.bindPopup(popup_d147c22b0926e589088ac290da930430)
+        ;
+
+        
+    
+    
+            var circle_marker_d24b45fd95fb02bb612d59e508eb734a = L.circleMarker(
+                [-6.99, 110.42],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_0e3ce20592c16ad7d14256ec794891d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0bdc1cd25737464ec5dc07e87d90a772 = $(`<div id="html_0bdc1cd25737464ec5dc07e87d90a772" style="width: 100.0%; height: 100.0%;">             Lokasi: Semarang<br>             PM2.5: 67<br>             Status: Udara Sedang             </div>`)[0];
+                popup_0e3ce20592c16ad7d14256ec794891d1.setContent(html_0bdc1cd25737464ec5dc07e87d90a772);
+            
+        
+
+        circle_marker_d24b45fd95fb02bb612d59e508eb734a.bindPopup(popup_0e3ce20592c16ad7d14256ec794891d1)
+        ;
+
+        
+    
+    
+            var circle_marker_70c14a319a3bfafae6f20e18b3b9cfc4 = L.circleMarker(
+                [-7.56, 110.82],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.8, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_083f417e9dede0510c81a0ec96390722 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37890b0da3221aa5ec641583c3b2491f = $(`<div id="html_37890b0da3221aa5ec641583c3b2491f" style="width: 100.0%; height: 100.0%;">             Lokasi: Solo<br>             PM2.5: 38<br>             Status: Udara Buruk             </div>`)[0];
+                popup_083f417e9dede0510c81a0ec96390722.setContent(html_37890b0da3221aa5ec641583c3b2491f);
+            
+        
+
+        circle_marker_70c14a319a3bfafae6f20e18b3b9cfc4.bindPopup(popup_083f417e9dede0510c81a0ec96390722)
+        ;
+
+        
+    
+    
+            var circle_marker_b8f6ec9734ee7ca15a366b2349072220 = L.circleMarker(
+                [-7.8, 110.36],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.5, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_d16584ee7a1fc1e38bca763ce5b35b81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c77418579a54d46badadd8041ff24e2 = $(`<div id="html_4c77418579a54d46badadd8041ff24e2" style="width: 100.0%; height: 100.0%;">             Lokasi: Yogyakarta<br>             PM2.5: 135<br>             Status: Udara Sedang             </div>`)[0];
+                popup_d16584ee7a1fc1e38bca763ce5b35b81.setContent(html_4c77418579a54d46badadd8041ff24e2);
+            
+        
+
+        circle_marker_b8f6ec9734ee7ca15a366b2349072220.bindPopup(popup_d16584ee7a1fc1e38bca763ce5b35b81)
+        ;
+
+        
+    
+    
+            var circle_marker_6742e76e61a0038663c312b07cf3581a = L.circleMarker(
+                [-6.8954449, 110.6367297],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.5, "stroke": true, "weight": 3}
+            ).addTo(map_fe4f4e6f6b7d94fb38383b9380818ded);
+        
+    
+        var popup_9a09120c5869fc6b7ffb1368943574cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_788bbab4b85b11c8b2fc1b47329d1b9e = $(`<div id="html_788bbab4b85b11c8b2fc1b47329d1b9e" style="width: 100.0%; height: 100.0%;">             Lokasi: RumahkuDemak<br>             PM2.5: 55<br>             Status: Udara Sedang             </div>`)[0];
+                popup_9a09120c5869fc6b7ffb1368943574cd.setContent(html_788bbab4b85b11c8b2fc1b47329d1b9e);
+            
+        
+
+        circle_marker_6742e76e61a0038663c312b07cf3581a.bindPopup(popup_9a09120c5869fc6b7ffb1368943574cd)
+        ;
+
+        
+    
+</script>
+</html>
